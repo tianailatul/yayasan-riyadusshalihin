@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yayasan Riyadus Shalihin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --navy:#0d3b66;
+    --blue:#1d6fff;
+    --green:#1f8f4c;
+    --gold:#f0b429;
+    --teal:#17a2b8;
+    --orange:#f5a623;
+    --purple:#7c3aed;
+    --amber:#b9822a;
+    --red:#e0537a;
+    --bg:#eef4fb;
+    --text:#1b1b1b;
+    --muted:#5b6b7c;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+h1,h2,h3,.brand-name{
+    font-family:'Poppins',Arial,sans-serif;
+}
+
+img{max-width:100%;display:block;}
+
+.icon{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ============ HEADER ============ */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:14px 40px;
+    background:white;
+    box-shadow:0 2px 14px rgba(13,59,102,0.10);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+}
+
+.logo svg, .logo img{width:54px;height:54px;flex-shrink:0;border-radius:50%;object-fit:cover;}
+
+.brand-name{
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:1px;
+    color:var(--navy);
+    line-height:1.3;
+}
+.brand-name .big{
+    display:block;
+    font-size:21px;
+    font-weight:800;
+}
+.brand-tagline{
+    font-size:11.5px;
+    color:var(--green);
+    font-weight:600;
+    margin-top:1px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    font-size:14.5px;
+    padding:9px 14px;
+    border-radius:20px;
+    white-space:nowrap;
+    transition:background .2s;
+    cursor:pointer;
+}
+
+nav a:hover{background:#f1f5fb;}
+
+nav a .icon{width:17px;height:17px;}
+
+nav a.active{
+    background:var(--blue);
+    color:white;
+    box-shadow:0 4px 10px rgba(29,111,255,0.35);
+}
+
+.btn-donasi{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:linear-gradient(135deg,#22a35a,var(--green));
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14.5px;
+    flex-shrink:0;
+    box-shadow:0 4px 10px rgba(31,143,76,0.35);
+    cursor:pointer;
+    border:none;
+}
+.btn-donasi .icon{width:16px;height:16px;}
+
+.nav-toggle{display:none;background:none;border:none;font-size:26px;color:var(--navy);cursor:pointer;}
+
+/* ============ HERO ============ */
+.hero{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    padding:60px 50px 110px;
+    background:linear-gradient(120deg,#e6f1ff,#f7fbff 60%);
+    overflow:hidden;
+}
+
+.leaf{
+    position:absolute;
+    pointer-events:none;
+    opacity:0.9;
+    z-index:1;
+}
+
+.hero-text{
+    max-width:480px;
+    position:relative;
+    z-index:3;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-style:italic;
+    font-weight:700;
+    color:var(--navy);
+    font-size:16px;
+    margin-bottom:8px;
+}
+.eyebrow::before,.eyebrow::after{
+    content:"";
+    width:34px;
+    height:2px;
+    background:var(--gold);
+}
+
+.hero-text h1{
+    font-size:36px;
+    line-height:1.2;
+    color:var(--navy);
+    font-weight:800;
+}
+
+.hero-text h1 span{
+    display:block;
+    color:var(--green);
+}
+
+.hero-text p{
+    margin-top:16px;
+    line-height:1.7;
+    color:var(--muted);
+    font-size:15px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:24px;
+    padding:12px 22px;
+    background:var(--navy);
+    color:white;
+    border-radius:24px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14.5px;
+    box-shadow:0 6px 16px rgba(13,59,102,0.3);
+    border:none;
+    cursor:pointer;
+}
+.btn .icon{width:17px;height:17px;}
+.btn .icon-circle{
+    background:rgba(255,255,255,0.18);
+    border-radius:50%;
+    padding:5px;
+    display:flex;
+}
+
+.hero-media{
+    position:relative;
+    flex:1;
+    max-width:640px;
+    z-index:2;
+}
+
+.hero-ribbon{
+    position:absolute;
+    left:-60px;
+    bottom:-40px;
+    width:120%;
+    z-index:1;
+}
+
+.hero-photo-wrap{
+    position:relative;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 25px 50px rgba(13,59,102,0.25);
+}
+.hero-photo-wrap img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+}
+
+.hero-badge{
+    position:absolute;
+    right:-26px;
+    bottom:-26px;
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    filter:drop-shadow(0 8px 14px rgba(0,0,0,0.25));
+}
+
+/* ============ ICON MENU ============ */
+.menu-wrap{
+    position:relative;
+    z-index:5;
+    margin:-70px 50px 0;
+}
+.menu{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:10px;
+    background:white;
+    border-radius:24px;
+    padding:26px 20px;
+    box-shadow:0 20px 45px rgba(13,59,102,0.14);
+}
+
+.menu .card{
+    text-align:center;
+    cursor:pointer;
+    border-radius:16px;
+    padding:6px 4px;
+    transition:.2s;
+}
+
+.card .badge{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 10px;
+    color:white;
+    box-shadow:0 6px 14px rgba(0,0,0,0.18);
+    transition:transform .2s, box-shadow .2s;
+}
+.card:hover .badge{transform:translateY(-4px);}
+
+.card.card-active{background:#eef4ff;}
+.card.card-active .badge{box-shadow:0 0 0 4px rgba(29,111,255,0.28),0 6px 14px rgba(0,0,0,0.18);}
+.card.card-active p{color:var(--blue);}
+
+.card .badge .icon{width:24px;height:24px;stroke:white;}
+
+.card p{
+    font-weight:700;
+    font-size:13.5px;
+    color:var(--navy);
+    line-height:1.3;
+}
+
+.bg-green{background:linear-gradient(135deg,#27a85e,var(--green));}
+.bg-blue{background:linear-gradient(135deg,#3a85ff,var(--blue));}
+.bg-teal{background:linear-gradient(135deg,#22b8cf,var(--teal));}
+.bg-orange{background:linear-gradient(135deg,#ffb84d,var(--orange));}
+.bg-purple{background:linear-gradient(135deg,#9461f7,var(--purple));}
+.bg-amber{background:linear-gradient(135deg,#cf9a45,var(--amber));}
+.bg-red{background:linear-gradient(135deg,#ef6f93,var(--red));}
+
+/* ============ MAIN CONTENT ============ */
+.container{
+    display:grid;
+    grid-template-columns:2.3fr 1fr;
+    gap:24px;
+    padding:40px 50px;
+    align-items:start;
+}
+
+.main-left{min-width:0;}
+
+/* ---- views (SPA-style swap) ---- */
+.view{display:none;}
+.view.active{display:block;animation:fadeIn .3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.beranda-grid{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:24px;
+    align-items:start;
+}
+
+.view-header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:22px;
+}
+.view-header .icon-wrap{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    flex-shrink:0;
+    box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+.view-header .icon-wrap .icon{width:24px;height:24px;stroke:white;}
+.view-header h2{font-size:21px;color:var(--navy);}
+.view-header p{color:var(--muted);font-size:13.5px;margin-top:2px;}
+
+.section-title{
+    color:var(--navy);
+    font-size:19px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.about-col .section-title::after{
+    content:"";
+    display:block;
+    width:38px;
+    height:3px;
+    background:var(--gold);
+    margin-top:8px;
+    border-radius:2px;
+}
+
+.about-col p{
+    color:var(--muted);
+    line-height:1.75;
+    font-size:14.5px;
+    margin:14px 0 18px;
+}
+
+.btn-outline{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--navy);
+    color:white;
+    padding:10px 18px;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:13.5px;
+    border:none;
+    cursor:pointer;
+}
+.btn-outline .icon{width:15px;height:15px;}
+
+.gate-frame{
+    margin-top:24px;
+    position:relative;
+    border-radius:0 0 60px 60px / 0 0 30px 30px;
+    overflow:hidden;
+    border:6px solid var(--gold);
+    border-top:none;
+}
+.gate-frame img{height:220px;object-fit:cover;width:100%;}
+
+.stats-heading{
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    color:var(--navy);
+    font-weight:700;
+    font-size:18px;
+    margin-bottom:20px;
+}
+.stats-heading::before,.stats-heading::after{
+    content:"";
+    height:2px;
+    width:60px;
+    background:var(--gold);
+}
+
+.stats-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.stat-card{
+    background:white;
+    border-radius:16px;
+    padding:18px 10px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(13,59,102,0.08);
+}
+
+.stat-card .icon-wrap{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 10px;
+}
+.stat-card .icon-wrap .icon{width:20px;height:20px;stroke:white;}
+
+.stat-card h3{
+    font-size:24px;
+    color:var(--navy);
+    font-weight:800;
+}
+.stat-card p{
+    font-size:12.5px;
+    color:var(--muted);
+    font-weight:600;
+    margin-top:2px;
+}
+
+.gallery-heading{
+    text-align:center;
+    color:var(--navy);
+    font-weight:700;
+    font-size:16px;
+    margin:30px 0 16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+}
+.gallery-heading::before,.gallery-heading::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:#d8e3ee;
+    max-width:140px;
+}
+
+.gallery-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+.gallery-row img{
+    height:140px;
+    object-fit:cover;
+    border-radius:14px;
+    box-shadow:0 6px 14px rgba(13,59,102,0.1);
+}
+
+.btn-center-wrap{text-align:center;margin-top:20px;}
+.btn-green{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green);
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    font-weight:700;
+    font-size:13.5px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+}
+.btn-green .icon{width:15px;height:15px;}
+
+/* ---- Profil view ---- */
+.visi-misi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px;}
+.vm-card{background:white;border-radius:14px;padding:18px;box-shadow:0 4px 14px rgba(13,59,102,0.07);}
+.vm-card h4{color:var(--navy);font-size:14.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.vm-card h4 .icon{width:17px;height:17px;stroke:var(--green);}
+.vm-card p, .vm-card li{font-size:12.5px;color:var(--muted);line-height:1.75;}
+.vm-card ul{padding-left:18px;}
+
+.pengurus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.pengurus-card{background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:0 4px 14px rgba(13,59,102,0.07);}
+.pengurus-card .avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--navy));display:flex;align-items:center;justify-content:center;margin:0 auto 8px;color:white;}
+.pengurus-card h4{font-size:13px;color:var(--navy);}
+.pengurus-card p{font-size:11.5px;color:var(--muted);margin-top:2px;}
+
+/* ---- Program view ---- */
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.program-card{background:white;border-radius:16px;padding:20px;box-shadow:0 6px 18px rgba(13,59,102,0.08);}
+.program-card .icon-wrap{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:white;}
+.program-card .icon-wrap .icon{width:22px;height:22px;stroke:white;}
+.program-card h4{font-size:14.5px;color:var(--navy);margin-bottom:6px;}
+.program-card p{font-size:12.5px;color:var(--muted);line-height:1.6;}
+
+/* ---- Kegiatan view (timeline) ---- */
+.timeline{display:flex;flex-direction:column;gap:12px;}
+.timeline-item{display:flex;gap:14px;background:white;border-radius:14px;padding:14px 16px;box-shadow:0 4px 14px rgba(13,59,102,0.07);align-items:center;}
+.timeline-item .icon-wrap{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;}
+.timeline-item .icon-wrap .icon{width:20px;height:20px;stroke:white;}
+.timeline-item .ti-text{flex:1;}
+.timeline-item h4{font-size:14px;color:var(--navy);}
+.timeline-item p{font-size:12px;color:var(--muted);margin-top:2px;}
+.timeline-item .time{font-size:12px;color:var(--green);font-weight:800;flex-shrink:0;background:#e7f6ec;padding:6px 12px;border-radius:12px;}
+
+/* ---- Donasi view ---- */
+.campaign-card{background:white;border-radius:16px;padding:20px;box-shadow:0 6px 18px rgba(13,59,102,0.08);margin-bottom:18px;}
+.campaign-card h4{color:var(--navy);font-size:15px;margin-bottom:10px;}
+.progress-bar{background:#eef2f7;border-radius:10px;height:10px;overflow:hidden;margin:10px 0 8px;}
+.progress-fill{background:linear-gradient(90deg,var(--green),#27a85e);height:100%;border-radius:10px;}
+.progress-info{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);}
+.progress-info strong{color:var(--navy);}
+
+.rekening-card{background:linear-gradient(135deg,var(--navy),#123a66);color:white;border-radius:16px;padding:20px;margin-bottom:18px;}
+.rekening-card h4{font-size:15px;margin-bottom:4px;}
+.rekening-card p{font-size:12.5px;color:#bcd2ec;}
+.bank-row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.1);border-radius:10px;padding:10px 14px;margin-top:10px;font-size:13.5px;}
+.bank-row strong{letter-spacing:1px;}
+
+.wakaf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.wakaf-card{background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:0 4px 14px rgba(13,59,102,0.07);}
+.wakaf-card .icon-wrap{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;color:white;}
+.wakaf-card .icon-wrap .icon{width:19px;height:19px;stroke:white;}
+.wakaf-card p{font-size:12.5px;font-weight:700;color:var(--navy);}
+
+/* ---- Galeri view ---- */
+.filter-row{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+.filter-btn{background:white;border:1.5px solid #d8e3ee;color:var(--navy);font-weight:600;font-size:12.5px;padding:7px 16px;border-radius:18px;cursor:pointer;transition:.2s;}
+.filter-btn.active{background:var(--blue);border-color:var(--blue);color:white;}
+.gallery-grid-full{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.gallery-grid-full figure{margin:0;}
+.gallery-grid-full img{height:160px;width:100%;object-fit:cover;border-radius:14px;box-shadow:0 6px 14px rgba(13,59,102,0.1);}
+.gallery-grid-full figcaption{font-size:11.5px;color:var(--muted);text-align:center;margin-top:6px;}
+
+/* ---- Pengumuman view ---- */
+.announce-list-full{display:flex;flex-direction:column;gap:14px;}
+.announce-card{display:flex;gap:14px;background:white;border-radius:14px;padding:16px;box-shadow:0 4px 14px rgba(13,59,102,0.07);align-items:flex-start;}
+.announce-card img{width:80px;height:80px;border-radius:10px;object-fit:cover;flex-shrink:0;}
+.announce-card h4{font-size:14.5px;color:var(--navy);margin-bottom:4px;}
+.announce-card p{font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:6px;}
+.announce-card a{font-size:12px;color:var(--blue);font-weight:700;text-decoration:none;}
+
+/* ---- Kontak view ---- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.contact-info-card{background:white;border-radius:14px;padding:20px;box-shadow:0 4px 14px rgba(13,59,102,0.07);}
+.contact-info-card .row{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;}
+.contact-info-card .row:last-child{margin-bottom:0;}
+.contact-info-card .row .icon-wrap{width:36px;height:36px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;}
+.contact-info-card .row .icon-wrap .icon{width:17px;height:17px;stroke:white;}
+.contact-info-card .row h4{font-size:13px;color:var(--navy);}
+.contact-info-card .row p{font-size:12.5px;color:var(--muted);margin-top:2px;}
+
+.contact-form-card{background:white;border-radius:14px;padding:20px;box-shadow:0 4px 14px rgba(13,59,102,0.07);}
+.contact-form-card label{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:5px;display:block;}
+.contact-form-card input,.contact-form-card textarea{width:100%;border:1.5px solid #e1e8f0;border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:14px;font-family:inherit;}
+.contact-form-card textarea{resize:vertical;min-height:80px;}
+.contact-form-card button{width:100%;justify-content:center;}
+.form-note{font-size:11px;color:var(--muted);margin-top:8px;text-align:center;}
+
+/* ============ SIDEBAR ============ */
+.sidebar{display:flex;flex-direction:column;gap:20px;}
+
+.box{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 6px 20px rgba(13,59,102,0.08);
+}
+
+.box-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
+}
+.box-head h2{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:17px;
+    color:var(--navy);
+}
+.box-head h2 .icon{width:18px;height:18px;stroke:var(--gold);}
+
+.tag-pill{
+    background:var(--green);
+    color:white;
+    font-size:11.5px;
+    font-weight:700;
+    padding:5px 12px;
+    border-radius:14px;
+    border:none;
+    cursor:pointer;
+}
+
+.announce-item{
+    display:flex;
+    gap:12px;
+    padding-bottom:14px;
+    margin-bottom:14px;
+    border-bottom:1px solid #eef2f7;
+}
+.announce-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+
+.date{
+    background:#e7f6ec;
+    color:var(--green);
+    padding:8px 4px;
+    border-radius:10px;
+    text-align:center;
+    min-width:46px;
+    font-weight:800;
+    font-size:15px;
+    line-height:1.1;
+    height:fit-content;
+}
+.date span{display:block;font-size:10px;font-weight:600;}
+
+.announce-text{flex:1;}
+.announce-text h4{font-size:13.5px;color:var(--text);line-height:1.3;}
+.announce-text a{
+    font-size:12px;
+    color:var(--blue);
+    font-weight:700;
+    text-decoration:none;
+}
+.announce-thumb{
+    width:54px;
+    height:54px;
+    border-radius:10px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+/* Waktu Sholat New Layout */
+.sholat-box {
+    background: white;
+    border-radius: 20px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(13,59,102,0.08);
+}
+.sholat-box .sholat-top {
+    background: linear-gradient(160deg, #123a66, var(--navy) 60%, #0a2747);
+    color: white;
+    padding: 24px 24px 30px;
+    position: relative;
+    text-align: center;
+}
+.sholat-box .skyline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 1;
+}
+.sholat-top-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+}
+.greeting-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+}
+.weather-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-icon-box .icon { width: 20px; height: 20px; stroke: white; }
+.greeting-wrap h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.greeting-wrap p { font-size: 12px; color: #bcd2ec; margin: 0; }
+
+.weather-info { text-align: right; }
+.weather-info .temp { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 6px; 
+    background: rgba(255,255,255,0.15); 
+    padding: 6px 12px; 
+    border-radius: 20px; 
+    font-size: 13px; 
+    font-weight: 700; 
+}
+.weather-info .temp .icon { width: 14px; height: 14px; }
+.weather-info p { font-size: 12px; color: #bcd2ec; margin: 4px 0 0; font-weight: 600; }
+
+.clock-wrap { position: relative; z-index: 2; }
+.clock-time { font-size: 46px; font-weight: 800; font-family: 'Poppins', sans-serif; letter-spacing: 1px; line-height: 1; margin-bottom: 12px; }
+.clock-date-pill { 
+    display: inline-block; 
+    background: #19314c; 
+    padding: 8px 20px; 
+    border-radius: 24px; 
+    font-size: 11.5px; 
+    font-weight: 700; 
+    letter-spacing: 0.5px; 
+    text-transform: uppercase; 
+    margin-bottom: 12px;
+}
+.hijri-date { font-size: 13px; font-weight: 600; color: #bcd2ec; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.hijri-date .icon { width: 14px; height: 14px; stroke: #bcd2ec; }
+
+.sholat-bottom {
+    background: white;
+    padding: 24px;
+}
+.sholat-bottom-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 18px;
+}
+.sholat-bottom-title .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+}
+.sholat-grid-8 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.sholat-item {
+    background: #f1f5fb;
+    border-radius: 12px;
+    padding: 12px 4px;
+    text-align: center;
+    color: var(--navy);
+    transition: .2s;
+}
+.sholat-item p { font-size: 10.5px; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; text-transform: uppercase; }
+.sholat-item h4 { font-size: 15px; font-weight: 800; }
+.sholat-item.active {
+    background: var(--navy);
+    color: white;
+    box-shadow: 0 6px 14px rgba(13,59,102,0.25);
+    transform: translateY(-2px);
+}
+.sholat-item.active p, .sholat-item.active h4 { color: white; }
+
+.sholat-source {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+}
+.sholat-source .icon { width: 14px; height: 14px; stroke: #a0aec0; }
+
+/* ============ FOOTER ============ */
+footer{
+    text-align:center;
+    padding:24px;
+    margin-top:10px;
+    background:var(--navy);
+    color:white;
+    font-size:13.5px;
+}
+footer span{color:var(--gold);font-weight:600;}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1100px){
+    nav{display:none;}
+    .nav-toggle{display:block;}
+    header.open nav{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:white;
+        padding:14px 20px;
+        box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
+    header.open nav a{width:100%;}
+}
+
+@media(max-width:900px){
+    .hero{flex-direction:column;padding:40px 24px 90px;text-align:center;}
+    .eyebrow,.hero-text h1{justify-content:center;}
+    .hero-text{max-width:100%;}
+    .hero-badge{display:none;}
+    .menu-wrap{margin:-50px 20px 0;}
+    .menu{grid-template-columns:repeat(3,1fr);}
+    .container{grid-template-columns:1fr;padding:30px 20px;}
+    .beranda-grid{grid-template-columns:1fr;}
+    .stats-row{grid-template-columns:repeat(2,1fr);}
+    .gallery-row{grid-template-columns:1fr;}
+    .sholat-grid-8{grid-template-columns:repeat(4,1fr);}
+    .visi-misi-grid{grid-template-columns:1fr;}
+    .pengurus-grid{grid-template-columns:repeat(2,1fr);}
+    .program-grid{grid-template-columns:repeat(2,1fr);}
+    .wakaf-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid-full{grid-template-columns:repeat(2,1fr);}
+    .contact-grid{grid-template-columns:1fr;}
+}
+
+@media(max-width:480px){
+    .menu{grid-template-columns:repeat(2,1fr);}
+    header{padding:12px 16px;}
+    .logo svg, .logo img{width:42px;height:42px;}
+    .brand-name .big{font-size:16px;}
+    .program-grid,.gallery-grid-full{grid-template-columns:1fr;}
+    .sholat-grid-8{grid-template-columns:repeat(2,1fr);}
+    .view-header{flex-wrap:wrap;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ SVG SPRITE (icons & logo, reused via <use>) ============ -->
+<svg style="display:none">
+  <symbol id="ic-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></symbol>
+  <symbol id="ic-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></symbol>
+  <symbol id="ic-book" viewBox="0 0 24 24"><path d="M4 5c2-1 5-1 8 0v14c-3-1-6-1-8 0z"/><path d="M20 5c-2-1-5-1-8 0v14c3-1 6-1 8 0z"/></symbol>
+  <symbol id="ic-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14.5 15.2c2 .4 3.5 1.8 3.5 4.8"/></symbol>
+  <symbol id="ic-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 17l-5.5-5.5-4 4-2.5-2.5-6 6"/></symbol>
+  <symbol id="ic-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="10.5" x2="12" y2="16"/><circle cx="12" cy="7.6" r="0.6" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 1-1 2-2 2-9 0-16-7-16-16 0-1 1-2 2-2z"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.5-9C1 8.5 2.5 5 6 5c2 0 3.5 1.2 4.2 2.4C10.9 6.2 12.4 5 14.4 5c3.5 0 5 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z"/></symbol>
+  <symbol id="ic-megaphone" viewBox="0 0 24 24"><path d="M3 10v4h3l7 4V6l-7 4H3z"/><path d="M14 9a3 3 0 010 6"/><path d="M17 6.2a6 6 0 010 11.6"/></symbol>
+  <symbol id="ic-grad" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></symbol>
+  <symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.6A9 9 0 1111.4 3a7.2 7.2 0 109.6 9.6z"/><path d="M18 2.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z"/></symbol>
+  <symbol id="ic-mosque" viewBox="0 0 24 24"><path d="M12 3l3 3v2H9V6z"/><circle cx="12" cy="5.5" r="1" fill="currentColor" stroke="none"/><path d="M4 20.5v-6.5c0-3 3.5-5 8-5s8 2 8 5v6.5"/><path d="M3 20.5h18"/><path d="M10 20.5v-4a2 2 0 014 0v4"/></symbol>
+  <symbol id="ic-handheart" viewBox="0 0 24 24"><path d="M12 8.5s-1.4-2.3-3.6-2.3c-1.8 0-3.1 1.4-3.1 3 0 2.6 3.6 4.5 6.7 7.3 3.1-2.8 6.7-4.7 6.7-7.3 0-1.6-1.3-3-3.1-3-2.2 0-3.6 2.3-3.6 2.3z"/></symbol>
+  <symbol id="ic-star4" viewBox="0 0 10 10"><path d="M5 0 L6.3 3.7 L10 5 L6.3 6.3 L5 10 L3.7 6.3 L0 5 L3.7 3.7 Z"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 6.5l8 6.5 8-6.5"/></symbol>
+  <symbol id="ic-drop" viewBox="0 0 24 24"><path d="M12 2.5s7 8 7 12.5a7 7 0 11-14 0c0-4.5 7-12.5 7-12.5z"/></symbol>
+
+  <symbol id="logo-badge" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="96" fill="#f0c33c" stroke="#0d3b66" stroke-width="4"/>
+    <g fill="#0d3b66">
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(0 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(36 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(72 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(108 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(144 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(180 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(216 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(252 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(288 100 100)"/>
+      <use href="#ic-star4" width="11" height="11" x="-5.5" y="-93" transform="rotate(324 100 100)"/>
+    </g>
+    <circle cx="100" cy="100" r="78" fill="#1d6fff"/>
+    <circle cx="100" cy="100" r="56" fill="#1f8f4c"/>
+    <path id="topArc" d="M 28,100 A 72,72 0 0 1 172,100" fill="none"/>
+    <path id="botArc" d="M 36,128 A 64,64 0 0 0 164,128" fill="none"/>
+    <text font-family="Poppins,Arial,sans-serif" font-size="13" font-weight="700" fill="#0d3b66" letter-spacing="1">
+      <textPath href="#topArc" startOffset="50%" text-anchor="middle">YAYASAN</textPath>
+    </text>
+    <text font-family="Poppins,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#0d3b66" letter-spacing="0.5">
+      <textPath href="#botArc" startOffset="50%" text-anchor="middle">RIYADUS SHALIHIN</textPath>
+    </text>
+    <g fill="white">
+      <rect x="68" y="118" width="64" height="34" rx="3"/>
+      <rect x="76" y="96" width="9" height="58" rx="2"/>
+      <rect x="115" y="96" width="9" height="58" rx="2"/>
+      <circle cx="80.5" cy="92" r="5"/>
+      <circle cx="119.5" cy="92" r="5"/>
+      <circle cx="100" cy="100" r="15"/>
+      <path d="M89 100a11 11 0 0122 0z" fill="white"/>
+      <rect x="96" y="134" width="8" height="18" fill="#1f8f4c"/>
+    </g>
+  </symbol>
+</svg>
+
+<header id="siteHeader">
+    <div class="logo">
+        <img src="logo yayasan.jpeg" alt="Logo Yayasan Riyadus Shalihin">
+        <div class="brand-name">
+            YAYASAN
+            <span class="big">RIYADUS SHALIHIN</span>
+            <div class="brand-tagline">Mencetak Generasi Sholihin, Berilmu &amp; Berakhlak</div>
+        </div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu">&#9776;</button>
+
+    <nav id="mainNav">
+        <a class="active" data-view="beranda"><svg class="icon"><use href="#ic-home"/></svg>Beranda</a>
+        <a data-view="profil"><svg class="icon"><use href="#ic-user"/></svg>Profil</a>
+        <a data-view="program"><svg class="icon"><use href="#ic-book"/></svg>Program</a>
+        <a data-view="kegiatan"><svg class="icon"><use href="#ic-people"/></svg>Kegiatan</a>
+        <a data-view="galeri"><svg class="icon"><use href="#ic-image"/></svg>Galeri</a>
+        <a data-view="pengumuman"><svg class="icon"><use href="#ic-info"/></svg>Informasi</a>
+        <a data-view="kontak"><svg class="icon"><use href="#ic-phone"/></svg>Kontak</a>
+    </nav>
+
+    <button class="btn-donasi" data-view="donasi"><svg class="icon"><use href="#ic-heart"/></svg>Donasi</button>
+</header>
+
+<section class="hero">
+    <svg class="leaf" style="top:-30px;left:-30px;width:160px;" viewBox="0 0 100 100"><path d="M0 0 C40 10 60 40 50 90 C20 80 -10 40 0 0Z" fill="#3f9d57" opacity="0.55"/></svg>
+    <svg class="leaf" style="bottom:30px;left:0;width:120px;" viewBox="0 0 100 100"><path d="M0 100 C30 70 70 70 100 40 C90 80 50 110 0 100Z" fill="#2e7d46" opacity="0.5"/></svg>
+
+    <div class="hero-text">
+        <div class="eyebrow">Selamat Datang di</div>
+        <h1>YAYASAN<span>RIYADUS SHALIHIN</span></h1>
+        <p>Bersama membangun generasi beriman, berilmu, berakhlak mulia dan bermanfaat bagi umat dan bangsa.</p>
+        <button class="btn" data-view="profil">
+            <span class="icon-circle"><svg class="icon"><use href="#ic-book"/></svg></span>
+            Mengenal Lebih Dekat
+            <svg class="icon"><use href="#ic-arrow"/></svg>
+        </button>
+    </div>
+
+    <div class="hero-media">
+        <svg class="hero-ribbon" viewBox="0 0 600 200" preserveAspectRatio="none">
+            <path d="M0,140 C150,180 350,80 600,120 L600,200 L0,200 Z" fill="#0d3b66" opacity="0.9"/>
+            <path d="M0,130 C150,170 350,70 600,110" stroke="#f0c33c" stroke-width="4" fill="none"/>
+        </svg>
+        <div class="hero-photo-wrap">
+            <img src="foto beranda.jpg" alt="Kegiatan Santri Riyadus Shalihin">
+        </div>
+        <img src="logo.jpg" class="hero-badge" alt="Logo Yayasan">
+    </div>
+</section>
+
+<div class="menu-wrap" id="menuWrap">
+    <div class="menu">
+        <div class="card" data-view="profil">
+            <div class="badge bg-green"><svg class="icon"><use href="#ic-mosque"/></svg></div>
+            <p>Profil Yayasan</p>
+        </div>
+        <div class="card" data-view="program">
+            <div class="badge bg-blue"><svg class="icon"><use href="#ic-book"/></svg></div>
+            <p>Program Pendidikan</p>
+        </div>
+        <div class="card" data-view="kegiatan">
+            <div class="badge bg-teal"><svg class="icon"><use href="#ic-people"/></svg></div>
+            <p>Kegiatan Santri</p>
+        </div>
+        <div class="card" data-view="donasi">
+            <div class="badge bg-orange"><svg class="icon"><use href="#ic-handheart"/></svg></div>
+            <p>Donasi &amp; Wakaf</p>
+        </div>
+        <div class="card" data-view="galeri">
+            <div class="badge bg-purple"><svg class="icon"><use href="#ic-image"/></svg></div>
+            <p>Galeri Kegiatan</p>
+        </div>
+        <div class="card" data-view="pengumuman">
+            <div class="badge bg-amber"><svg class="icon"><use href="#ic-megaphone"/></svg></div>
+            <p>Pengumuman</p>
+        </div>
+    </div>
+</div>
+
+<section class="container">
+
+    <div class="main-left">
+
+        <!-- ===== VIEW: BERANDA (default) ===== -->
+        <div class="view active" id="view-beranda">
+            <div class="beranda-grid">
+                <div class="about-col">
+                    <h2 class="section-title">Tentang Riyadus Shalihin</h2>
+                    <p>Yayasan Riyadus Shalihin berdiri untuk membimbing dan membina anak-anak agar menjadi generasi sholihin yang cinta Al-Qur'an, berakhlak mulia, dan siap mengabdi untuk agama, nusa dan bangsa.</p>
+                    <button class="btn-outline" data-view="profil">Baca Selengkapnya <svg class="icon"><use href="#ic-arrow"/></svg></button>
+
+                    <div class="gate-frame">
+                        <img src="https://placehold.co/360x440/0d3b66/ffffff?text=Gerbang+Yayasan" alt="Gerbang Yayasan Riyadus Shalihin">
+                    </div>
+                </div>
+
+                <div class="stats-col">
+                    <div class="stats-heading">Alhamdulillah, bersama kita bisa</div>
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="icon-wrap bg-blue"><svg class="icon"><use href="#ic-people"/></svg></div>
+                            <h3>120+</h3>
+                            <p>Santri Aktif</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon-wrap bg-green"><svg class="icon"><use href="#ic-book"/></svg></div>
+                            <h3>3</h3>
+                            <p>Program Pendidikan</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon-wrap bg-amber"><svg class="icon"><use href="#ic-grad"/></svg></div>
+                            <h3>4</h3>
+                            <p>Guru &amp; Pembina</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon-wrap bg-red"><svg class="icon"><use href="#ic-heart"/></svg></div>
+                            <h3>10+</h3>
+                            <p>Donatur &amp; Sahabat</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-heading">Galeri Kegiatan</div>
+                    <div class="gallery-row">
+                        <img src="https://placehold.co/300x220/1d6fff/ffffff?text=Kajian+Santri" alt="Kajian Santri">
+                        <img src="https://placehold.co/300x220/1f8f4c/ffffff?text=Sholat+Berjamaah" alt="Sholat Berjamaah">
+                        <img src="https://placehold.co/300x220/17a2b8/ffffff?text=Kerja+Bakti" alt="Kerja Bakti Santri">
+                    </div>
+                    <div class="btn-center-wrap">
+                        <button class="btn-green" data-view="galeri">Lihat Galeri <svg class="icon"><use href="#ic-arrow"/></svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: PROFIL YAYASAN ===== -->
+        <div class="view" id="view-profil">
+            <div class="view-header">
+                <div class="icon-wrap bg-green"><svg class="icon"><use href="#ic-mosque"/></svg></div>
+                <div>
+                    <h2>Profil Yayasan</h2>
+                    <p>Sejarah, visi misi, dan struktur pengurus Yayasan Riyadus Shalihin</p>
+                </div>
+            </div>
+
+            <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:18px;">Yayasan Riyadus Shalihin didirikan dengan tekad membina generasi yang cinta Al-Qur'an, berakhlak mulia, dan bermanfaat bagi umat. Berawal dari sebuah majelis kajian kecil, kini yayasan telah berkembang menjadi lembaga pendidikan Islam terpadu yang menaungi ratusan santri dengan dukungan puluhan guru dan pembina.</p>
+
+            <div class="visi-misi-grid">
+                <div class="vm-card">
+                    <h4><svg class="icon"><use href="#ic-info"/></svg>Visi</h4>
+                    <p>Menjadi lembaga pendidikan Islam terpercaya yang mencetak generasi sholihin, berilmu, berakhlak, dan bermanfaat bagi umat serta bangsa.</p>
+                </div>
+                <div class="vm-card">
+                    <h4><svg class="icon"><use href="#ic-grad"/></svg>Misi</h4>
+                    <ul>
+                        <li>Menyelenggarakan pendidikan Al-Qur'an dan Diniyah yang berkualitas</li>
+                        <li>Membina akhlak dan kepribadian santri</li>
+                        <li>Memberdayakan masyarakat melalui program sosial dan dakwah</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-bottom:14px;">Struktur Pengurus</h2>
+            <div class="pengurus-grid">
+                <div class="pengurus-card">
+                    <div class="avatar"><svg class="icon"><use href="#ic-user"/></svg></div>
+                    <h4>Ketua Yayasan</h4>
+                    <p>Ustad Sadran S.ag</p>
+                </div>
+                <div class="pengurus-card">
+                    <div class="avatar"><svg class="icon"><use href="#ic-user"/></svg></div>
+                    <h4>Sekretaris</h4>
+                    <p>Wasi'atul Marhamah</p>
+                </div>
+                <div class="pengurus-card">
+                    <div class="avatar"><svg class="icon"><use href="#ic-user"/></svg></div>
+                    <h4>Bendahara</h4>
+                    <p>Shofiatul Ulya</p>
+                </div>
+                <div class="pengurus-card">
+                    <div class="avatar"><svg class="icon"><use href="#ic-user"/></svg></div>
+                    <h4>Kepala Pendidikan</h4>
+                    <p>Evi Yuliana S.pd.i</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: PROGRAM PENDIDIKAN ===== -->
+        <div class="view" id="view-program">
+            <div class="view-header">
+                <div class="icon-wrap bg-blue"><svg class="icon"><use href="#ic-book"/></svg></div>
+                <div>
+                    <h2>Program Pendidikan</h2>
+                    <p>Beragam program pembelajaran untuk membentuk santri yang berilmu dan berakhlak</p>
+                </div>
+            </div>
+            <div class="program-grid">
+                <div class="program-card">
+                    <div class="icon-wrap bg-green"><svg class="icon"><use href="#ic-book"/></svg></div>
+                    <h4>TPQ &amp; Tahfidz Qur'an</h4>
+                    <p>Pembelajaran membaca, menulis, dan menghafal Al-Qur'an dengan metode bertahap.</p>
+                </div>
+                <div class="program-card">
+                    <div class="icon-wrap bg-blue"><svg class="icon"><use href="#ic-grad"/></svg></div>
+                    <h4>Madrasah Diniyah</h4>
+                    <p>Pendidikan ilmu agama meliputi fiqih, akidah, dan akhlak.</p>
+                </div>
+                <div class="program-card">
+                    <div class="icon-wrap bg-teal"><svg class="icon"><use href="#ic-mosque"/></svg></div>
+                    <h4>Pondok Tahfidz</h4>
+                    <p>Program berasrama yang fokus pada hafalan Al-Qur'an secara intensif.</p>
+                </div>
+                <div class="program-card">
+                    <div class="icon-wrap bg-orange"><svg class="icon"><use href="#ic-heart"/></svg></div>
+                    <h4>Bimbingan Akhlak</h4>
+                    <p>Pembinaan karakter dan akhlak santri dalam keseharian di lingkungan yayasan.</p>
+                </div>
+                <div class="program-card">
+                    <div class="icon-wrap bg-purple"><svg class="icon"><use href="#ic-megaphone"/></svg></div>
+                    <h4>Kajian Rutin Mingguan</h4>
+                    <p>Kajian kitab dan tausiyah yang terbuka untuk santri maupun masyarakat umum.</p>
+                </div>
+                <div class="program-card">
+                    <div class="icon-wrap bg-amber"><svg class="icon"><use href="#ic-people"/></svg></div>
+                    <h4>Pelatihan Keterampilan</h4>
+                    <p>Pembekalan keterampilan hidup dan wirausaha untuk bekal santri di masa depan.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: KEGIATAN SANTRI ===== -->
+        <div class="view" id="view-kegiatan">
+            <div class="view-header">
+                <div class="icon-wrap bg-teal"><svg class="icon"><use href="#ic-people"/></svg></div>
+                <div>
+                    <h2>Kegiatan Santri</h2>
+                    <p>Jadwal kegiatan rutin santri di Yayasan Riyadus Shalihin</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="icon-wrap bg-blue"><svg class="icon"><use href="#ic-grad"/></svg></div>
+                    <div class="ti-text"><h4>Madrasah Diniyah, Tahfidz &amp; Setoran Hafalan</h4><p>Pembelajaran diniyah dan setoran hafalan Al-Qur'an kepada pembimbing.</p></div>
+                    <div class="time">Senin&ndash;Kamis &middot; 15:00</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon-wrap bg-purple"><svg class="icon"><use href="#ic-book"/></svg></div>
+                    <div class="ti-text"><h4>Pembacaan Ratibul Haddad</h4><p>Kegiatan rutin pekanan menjelang sore bersama santri dan pembimbing.</p></div>
+                    <div class="time">Jum'at &middot; 15:00</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon-wrap" style="background:linear-gradient(135deg,#9aa5b1,#6b7684);"><svg class="icon"><use href="#ic-moon"/></svg></div>
+                    <div class="ti-text"><h4>Libur</h4><p>Tidak ada kegiatan terjadwal, santri beristirahat.</p></div>
+                    <div class="time">Sabtu&ndash;Minggu</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: DONASI & WAKAF ===== -->
+        <div class="view" id="view-donasi">
+            <div class="view-header">
+                <div class="icon-wrap bg-orange"><svg class="icon"><use href="#ic-handheart"/></svg></div>
+                <div>
+                    <h2>Donasi &amp; Wakaf</h2>
+                    <p>Setiap kontribusi Anda menjadi ladang amal yang terus mengalir</p>
+                </div>
+            </div>
+
+            <div class="campaign-card">
+                <h4>Pembangunan Asrama Santri Baru</h4>
+                <div class="progress-bar"><div class="progress-fill" style="width:62%;"></div></div>
+                <div class="progress-info"><span>Terkumpul: <strong>Rp 186.000.000</strong></span><span>Target: <strong>Rp 300.000.000</strong></span></div>
+            </div>
+
+            <div class="rekening-card">
+                <h4>Salurkan Donasi Anda</h4>
+                <p>Transfer melalui rekening resmi yayasan di bawah ini</p>
+                <div class="bank-row"><span>Bank Syariah Indonesia</span><strong>1234567890</strong></div>
+                <div class="bank-row"><span>a.n. Yayasan Riyadus Shalihin</span></div>
+            </div>
+
+            <h2 class="section-title" style="margin-bottom:14px;">Program Wakaf</h2>
+            <div class="wakaf-grid">
+                <div class="wakaf-card">
+                    <div class="icon-wrap bg-green"><svg class="icon"><use href="#ic-pin"/></svg></div>
+                    <p>Wakaf Tanah</p>
+                </div>
+                <div class="wakaf-card">
+                    <div class="icon-wrap bg-blue"><svg class="icon"><use href="#ic-mosque"/></svg></div>
+                    <p>Wakaf Bangunan</p>
+                </div>
+                <div class="wakaf-card">
+                    <div class="icon-wrap bg-purple"><svg class="icon"><use href="#ic-book"/></svg></div>
+                    <p>Wakaf Al-Qur'an</p>
+                </div>
+                <div class="wakaf-card">
+                    <div class="icon-wrap bg-teal"><svg class="icon"><use href="#ic-drop"/></svg></div>
+                    <p>Wakaf Sumur &amp; Air Bersih</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: GALERI KEGIATAN (full) ===== -->
+        <div class="view" id="view-galeri">
+            <div class="view-header">
+                <div class="icon-wrap bg-purple"><svg class="icon"><use href="#ic-image"/></svg></div>
+                <div>
+                    <h2>Galeri Kegiatan</h2>
+                    <p>Dokumentasi kegiatan santri dan yayasan</p>
+                </div>
+            </div>
+            <div class="filter-row" id="filterRow">
+                <button class="filter-btn active" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="pendidikan">Pendidikan</button>
+                <button class="filter-btn" data-filter="ibadah">Ibadah</button>
+                <button class="filter-btn" data-filter="sosial">Kegiatan Sosial</button>
+            </div>
+            <div class="gallery-grid-full" id="galleryGridFull">
+                <figure data-cat="pendidikan"><img src="https://placehold.co/320x220/1d6fff/ffffff?text=Kajian+Santri"><figcaption>Kajian Santri</figcaption></figure>
+                <figure data-cat="ibadah"><img src="https://placehold.co/320x220/1f8f4c/ffffff?text=Sholat+Berjamaah"><figcaption>Sholat Berjamaah</figcaption></figure>
+                <figure data-cat="sosial"><img src="https://placehold.co/320x220/17a2b8/ffffff?text=Kerja+Bakti"><figcaption>Kerja Bakti</figcaption></figure>
+                <figure data-cat="pendidikan"><img src="https://placehold.co/320x220/7c3aed/ffffff?text=Tahfidz+Qur%27an"><figcaption>Setoran Tahfidz</figcaption></figure>
+                <figure data-cat="pendidikan"><img src="https://placehold.co/320x220/b9822a/ffffff?text=Madrasah+Diniyah"><figcaption>Madrasah Diniyah</figcaption></figure>
+                <figure data-cat="sosial"><img src="https://placehold.co/320x220/f5a623/ffffff?text=Bakti+Sosial"><figcaption>Bakti Sosial</figcaption></figure>
+                <figure data-cat="sosial"><img src="https://placehold.co/320x220/22a35a/ffffff?text=Santunan+Yatim"><figcaption>Santunan Yatim</figcaption></figure>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: PENGUMUMAN (full) ===== -->
+        <div class="view" id="view-pengumuman">
+            <div class="view-header">
+                <div class="icon-wrap bg-amber"><svg class="icon"><use href="#ic-megaphone"/></svg></div>
+                <div>
+                    <h2>Pengumuman</h2>
+                    <p>Informasi dan pengumuman terbaru dari yayasan</p>
+                </div>
+            </div>
+            <div class="announce-list-full">
+                <div class="announce-card">
+                    <div class="date">18<span>Apr</span></div>
+                    <div style="flex:1;"><h4>Pendaftaran Santri Baru Tahun Ajaran 2025/2026</h4><p>Pendaftaran santri baru telah dibuka. Kuota terbatas, segera daftarkan putra-putri Anda.</p><a href="#">Selengkapnya &rarr;</a></div>
+                    <img src="https://placehold.co/100x100/0d3b66/ffffff?text=01">
+                </div>
+                <div class="announce-card">
+                    <div class="date">12<span>Apr</span></div>
+                    <div style="flex:1;"><h4>Kegiatan Ramadhan 1447 H</h4><p>Rangkaian kegiatan Ramadhan meliputi kajian, tadarus bersama, dan buka puasa bersama.</p><a href="#">Selengkapnya &rarr;</a></div>
+                    <img src="https://placehold.co/100x100/1f8f4c/ffffff?text=02">
+                </div>
+                <div class="announce-card">
+                    <div class="date">05<span>Apr</span></div>
+                    <div style="flex:1;"><h4>Jadwal Kajian Rutin Yayasan</h4><p>Kajian rutin mingguan terbuka untuk masyarakat umum setiap akhir pekan.</p><a href="#">Selengkapnya &rarr;</a></div>
+                    <img src="https://placehold.co/100x100/1d6fff/ffffff?text=03">
+                </div>
+                <div class="announce-card">
+                    <div class="date">28<span>Mar</span></div>
+                    <div style="flex:1;"><h4>Pembagian Rapor Semester Genap</h4><p>Pengambilan rapor santri dilaksanakan langsung oleh orang tua/wali di kantor yayasan.</p><a href="#">Selengkapnya &rarr;</a></div>
+                    <img src="https://placehold.co/100x100/7c3aed/ffffff?text=04">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== VIEW: KONTAK ===== -->
+        <div class="view" id="view-kontak">
+            <div class="view-header">
+                <div class="icon-wrap bg-blue"><svg class="icon"><use href="#ic-phone"/></svg></div>
+                <div>
+                    <h2>Kontak Kami</h2>
+                    <p>Hubungi yayasan untuk informasi lebih lanjut</p>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <div class="row"><div class="icon-wrap"><svg class="icon"><use href="#ic-pin"/></svg></div><div><h4>Alamat</h4><p>Jl. Seruni Kp. Utara RT:001 RW:001 Perante </p></div></div>
+                    <div class="row"><div class="icon-wrap"><svg class="icon"><use href="#ic-phone"/></svg></div><div><h4>Telepon</h4><p>(082) 335568812</p></div></div>
+                    <div class="row"><div class="icon-wrap"><svg class="icon"><use href="#ic-mail"/></svg></div><div><h4>Email</h4><p>info@riyadusshalihin.or.id</p></div></div>
+                </div>
+                <div class="contact-form-card">
+                    <label>Nama</label>
+                    <input type="text" placeholder="Nama Anda">
+                    <label>Email</label>
+                    <input type="email" placeholder="Email Anda">
+                    <label>Pesan</label>
+                    <textarea placeholder="Tulis pesan Anda di sini..."></textarea>
+                    <button class="btn-green" type="button">Kirim Pesan <svg class="icon"><use href="#ic-arrow"/></svg></button>
+                    <p class="form-note">Form contoh tampilan &mdash; sambungkan ke email/CMS Anda agar berfungsi.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+        <div class="box">
+            <div class="box-head">
+                <h2><svg class="icon"><use href="#ic-megaphone"/></svg>Pengumuman Terbaru</h2>
+                <button class="tag-pill" data-view="pengumuman">Lihat Semua</button>
+            </div>
+
+            <div class="announce-item">
+                <div class="date">18<span>Apr</span></div>
+                <div class="announce-text">
+                    <h4>Pendaftaran Santri Baru Tahun Ajaran 2025/2026</h4>
+                    <a href="#" data-view="pengumuman">Selengkapnya &rarr;</a>
+                </div>
+                <img class="announce-thumb" src="https://placehold.co/100x100/0d3b66/ffffff?text=01" alt="Pendaftaran Santri Baru">
+            </div>
+
+            <div class="announce-item">
+                <div class="date">12<span>Apr</span></div>
+                <div class="announce-text">
+                    <h4>Kegiatan Ramadhan 1447 H</h4>
+                    <a href="#" data-view="pengumuman">Selengkapnya &rarr;</a>
+                </div>
+                <img class="announce-thumb" src="https://placehold.co/100x100/1f8f4c/ffffff?text=02" alt="Kegiatan Ramadhan">
+            </div>
+
+            <div class="announce-item">
+                <div class="date">05<span>Apr</span></div>
+                <div class="announce-text">
+                    <h4>Jadwal Kajian Rutin Yayasan</h4>
+                    <a href="#" data-view="pengumuman">Selengkapnya &rarr;</a>
+                </div>
+                <img class="announce-thumb" src="https://placehold.co/100x100/1d6fff/ffffff?text=03" alt="Kajian Rutin">
+            </div>
+        </div>
+
+        <div class="box sholat-box" id="sholatBoxContainer">
+            <div class="sholat-top">
+                <svg class="skyline" viewBox="0 0 400 60" preserveAspectRatio="none">
+                    <rect x="0" y="30" width="400" height="30" fill="#06182e"/>
+                    <path d="M20 60V35h10v-8l5-5 5 5v8h10v25z" fill="#06182e"/>
+                    <path d="M150 60V25c0-8 6-14 14-14s14 6 14 14v35z" fill="#06182e"/>
+                    <path d="M300 60V40h8v-6l4-5 4 5v6h8v20z" fill="#06182e"/>
+                </svg>
+
+                <div class="sholat-top-flex">
+                    <div class="greeting-wrap">
+                        <div class="weather-icon-box"><svg class="icon"><use href="#ic-moon"/></svg></div>
+                        <div>
+                            <h4 id="greetingTitle">Selamat Siang</h4>
+                            <p>Tetap fokus dan penuh semangat</p>
+                        </div>
+                    </div>
+                    <div class="weather-info">
+                        <div class="temp"><svg class="icon"><use href="#ic-moon"/></svg> 31&deg;C</div>
+                        <p>Cerah</p>
+                    </div>
+                </div>
+
+                <div class="clock-wrap">
+                    <div class="clock-time" id="digitalClock">--:--:--</div>
+                    <div class="clock-date-pill" id="sholatDate">MEMUAT...</div>
+                    <div class="hijri-date" id="hijriDate"><svg class="icon"><use href="#ic-moon"/></svg> Memuat...</div>
+                </div>
+            </div>
+
+            <div class="sholat-bottom">
+                <div class="sholat-bottom-title">
+                    <div class="dot"></div> Waktu Sholat Kabupaten Probolinggo
+                </div>
+                <div class="sholat-grid-8" id="sholatRow">
+                    <div class="sholat-item"><p>IMSAK</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>SUBUH</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>TERBIT</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>DHUHA</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>DZUHUR</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>ASHAR</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>MAGHRIB</p><h4>--:--</h4></div>
+                    <div class="sholat-item"><p>ISYA</p><h4>--:--</h4></div>
+                </div>
+                <div class="sholat-source">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> Sumber: api.myquran.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    &copy; 2026 <span>Yayasan Riyadus Shalihin</span> &mdash; Seluruh hak cipta dilindungi.
+</footer>
+
+<script>
+// ===== Navigasi antar tampilan (role/menu) tanpa reload halaman =====
+function showView(viewName){
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+    var target = document.getElementById('view-' + viewName);
+    if(target){ target.classList.add('active'); }
+
+    document.querySelectorAll('nav a').forEach(function(a){ a.classList.remove('active'); });
+    document.querySelectorAll('.menu .card').forEach(function(c){ c.classList.remove('card-active'); });
+
+    document.querySelectorAll('[data-view="' + viewName + '"]').forEach(function(el){
+        if(el.tagName === 'A'){ el.classList.add('active'); }
+        if(el.classList.contains('card')){ el.classList.add('card-active'); }
+    });
+
+    var anchor = document.getElementById('menuWrap');
+    if(anchor){ anchor.scrollIntoView({behavior:'smooth', block:'start'}); }
+
+    document.getElementById('siteHeader').classList.remove('open');
+}
+
+document.querySelectorAll('[data-view]').forEach(function(el){
+    el.addEventListener('click', function(e){
+        e.preventDefault();
+        showView(this.getAttribute('data-view'));
+    });
+});
+
+// Toggle menu mobile
+document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('siteHeader').classList.toggle('open');
+});
+
+// Filter galeri (kategori)
+document.querySelectorAll('#filterRow .filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+        document.querySelectorAll('#filterRow .filter-btn').forEach(function(b){ b.classList.remove('active'); });
+        this.classList.add('active');
+        var cat = this.getAttribute('data-filter');
+        document.querySelectorAll('#galleryGridFull figure').forEach(function(fig){
+            if(cat === 'semua' || fig.getAttribute('data-cat') === cat){
+                fig.style.display = '';
+            } else {
+                fig.style.display = 'none';
+            }
+        });
+    });
+});
+
+// ===== Tanggal & Waktu Sholat: otomatis menyesuaikan hari, auto-refresh saat ganti hari =====
+var hariList = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+var bulanList = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+var sholatLastDateKey = null; // menyimpan tanggal terakhir yang sudah diambil jadwalnya
+var sholatData = null;
+
+function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+
+function updateClock(){
+    var d = new Date();
+    var h = pad2(d.getHours());
+    var m = pad2(d.getMinutes());
+    var s = pad2(d.getSeconds());
+    document.getElementById('digitalClock').textContent = h + ":" + m + ":" + s;
+
+    var greeting = "Selamat Malam";
+    if(d.getHours() >= 4 && d.getHours() < 11) greeting = "Selamat Pagi";
+    else if(d.getHours() >= 11 && d.getHours() < 15) greeting = "Selamat Siang";
+    else if(d.getHours() >= 15 && d.getHours() < 18) greeting = "Selamat Sore";
+    document.getElementById('greetingTitle').textContent = greeting;
+
+    updateActiveSholat(h + ":" + m);
+}
+
+function updateActiveSholat(currentTimeStr){
+    if(!sholatData) return;
+    var t = sholatData;
+    var times = [
+        {name: 'IMSAK', val: t.imsak},
+        {name: 'SUBUH', val: t.subuh},
+        {name: 'TERBIT', val: t.terbit},
+        {name: 'DHUHA', val: t.dhuha},
+        {name: 'DZUHUR', val: t.dzuhur},
+        {name: 'ASHAR', val: t.ashar},
+        {name: 'MAGHRIB', val: t.maghrib},
+        {name: 'ISYA', val: t.isya}
+    ];
+
+    var activeIdx = -1;
+    for(var i=0; i<times.length; i++){
+        if(currentTimeStr >= times[i].val){
+            activeIdx = i;
+        }
+    }
+    if(activeIdx === -1) activeIdx = 7;
+
+    var rowHtml = '';
+    for(var i=0; i<times.length; i++){
+        var cls = (i === activeIdx) ? 'sholat-item active' : 'sholat-item';
+        rowHtml += '<div class="' + cls + '"><p>' + times[i].name + '</p><h4>' + times[i].val + '</h4></div>';
+    }
+    document.getElementById('sholatRow').innerHTML = rowHtml;
+}
+
+function tampilkanTanggalHariIni(d){
+    var teks = hariList[d.getDay()] + ", " + pad2(d.getDate()) + " " + bulanList[d.getMonth()] + " " + d.getFullYear();
+    document.getElementById('sholatDate').textContent = teks.toUpperCase();
+    
+    try {
+        var hijriFormatter = new Intl.DateTimeFormat('id-ID-u-ca-islamic', {day: 'numeric', month: 'long', year: 'numeric'});
+        var hijriStr = hijriFormatter.format(d);
+        if(!hijriStr.includes(' M ')) {
+            if(!hijriStr.endsWith('H') && !hijriStr.endsWith('AH')) hijriStr += ' H';
+        }
+        document.getElementById('hijriDate').innerHTML = '<svg class="icon"><use href="#ic-moon"/></svg> ' + hijriStr;
+    } catch(e) {
+        document.getElementById('hijriDate').innerHTML = '<svg class="icon"><use href="#ic-moon"/></svg> 1448 Hijriyah';
+    }
+}
+
+function ambilJadwalSholat(){
+    var d = new Date();
+    var dateKey = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
+
+    tampilkanTanggalHariIni(d);
+    updateClock();
+
+    if(dateKey === sholatLastDateKey){ return; }
+
+    var y = d.getFullYear();
+    var m = pad2(d.getMonth() + 1);
+    var day = pad2(d.getDate());
+
+    fetch('https://api.myquran.com/v2/sholat/jadwal/1638/' + y + '/' + m + '/' + day)
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+          if(data && data.status){
+              sholatData = data.data.jadwal;
+              updateActiveSholat(pad2(d.getHours()) + ":" + pad2(d.getMinutes()));
+              sholatLastDateKey = dateKey;
+          }
+      })
+      .catch(function(){});
+}
+
+ambilJadwalSholat();
+setInterval(updateClock, 1000);
+setInterval(ambilJadwalSholat, 60 * 1000);
+
+// Tampilkan halaman Beranda secara default saat pertama dibuka
+showView('beranda');
+</script>
+
+</body>
+</html>
